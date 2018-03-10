@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FaceBooky</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>articles
+
+  <body>
+
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home",   '/' %></li>
+          <li><%= link_to "Sign Up",'/users/sign_up' %></li>
+          <li><%= link_to "Log in", '/users/sign_in' %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <%= yield %>
+    <% if current_user %>
+  <%= link_to 'Logout' , destroy_user_session_path, method: :delete   %>
+    <%end%>
+  </body>
+</html>

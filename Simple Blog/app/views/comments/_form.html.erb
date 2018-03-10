@@ -1,0 +1,25 @@
+<%= form_with(model: [ @post,@post.comments.build]) do |form| %>
+
+  <!--<p>-->
+    <% form.label :userName %>
+    <%= form.hidden_field :userName %>
+  </p>
+  <p>
+    <% form.label :body %>
+    <%= form.text_area :body, id: :comment_body,class:"form-control" %>
+  </p>
+
+  <!--<div class="field">-->
+    <!--<%= form.label :user_id %>-->
+    <%= form.hidden_field :user_id, id: :comment_user_id %>
+  <!--</div>-->
+
+  <!--<div class="field">-->
+    <!--<%= form.label :post_id %>-->
+    <%= form.hidden_field :post_id, id: :comment_post_id %>
+  <!--</div>-->
+
+  <p>
+    <%= form.submit class:"btn btn-primary center-block"%>
+  </p>
+<% end %>

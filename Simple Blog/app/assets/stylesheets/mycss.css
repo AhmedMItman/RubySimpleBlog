@@ -1,0 +1,19 @@
+p{
+    #color: #730E15;
+}
+.postTitle
+{
+    padding-left:10px ;
+    font-size: 18px;
+}
+.commentTitle
+{
+    font-size: 23px;
+    padding-left:10px ;
+}
+.postBody
+{
+    background-color: #999999;
+    width: 50%;
+    padding-left: 10px;
+}
